@@ -1,0 +1,19 @@
+// Declare color variables.
+$gray: #444444;
+$white: #ffffff;
+
+body {
+    background-color: $gray;
+}
+
+.intro {
+    background-color: $white;
+}
+
+.main {
+    background-color: $white;
+}
+
+.sidebar {
+    background-color: $white;
+}
