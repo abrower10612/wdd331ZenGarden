@@ -9,10 +9,7 @@
 
 
 
-// Import layout partial into main scss. ------------------------------------------------------------
-@import 'layout';
-
-// Import color partial into main scss. -------------------------------------------------------------
+// Import partials --------------------------------------------------------------------
 @import 'color';
-
-
+@import 'typography';
+@import 'layout';

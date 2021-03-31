@@ -4,19 +4,69 @@
 /* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
 /* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English&family=Vollkorn+SC&display=swap");
+body {
+  background-color: #5a200a;
+  opacity: 90%;
+}
+
+.intro, .main, .sidebar {
+  background-color: #ffffff;
+  opacity: 90%;
+}
+
+a {
+  color: #f87500;
+}
+a:hover {
+  color: #f7a93d;
+}
+
+h1, h2, h3 {
+  font-family: "Vollkorn SC";
+  color: #5a200a;
+}
+
+p {
+  font-family: "IM Fell English";
+  color: #a63700;
+}
+
+.design-selection ul li {
+  font-family: "Vollkorn SC";
+  font-size: 14px;
+}
+.design-selection ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
 
-footer,
-h1 {
+footer, h1 {
   text-align: center;
 }
 
-h2,
-h3,
-ul {
+footer a {
+  background-color: #5a200a;
+  display: inline-block;
+  width: 60px;
+  padding: 5px 0px 5px 0px;
+  margin: 10px;
+  border-radius: 10%;
+  text-decoration: none;
+  color: #ffffff;
+}
+footer a:hover {
+  background-color: #a63700;
+  color: #ffffff;
+}
+
+h2, h3, ul {
   margin: 0 20px;
 }
 
@@ -25,9 +75,7 @@ li {
   margin-bottom: 10px;
 }
 
-p,
-footer,
-.sidebar h3 {
+p, footer, .sidebar h3 {
   margin: 20px;
 }
 
@@ -40,14 +88,34 @@ ul {
   text-align: center;
 }
 .design-selection ul li {
-  width: 100px;
-  margin: auto;
-  margin-bottom: 20px;
-  padding: 10%;
-  height: 100px;
-  border: 1px solid black;
+  display: grid;
+  grid-template-rows: auto 16px auto;
+  background-image: url("assets/wanted_poster.png");
+  background-size: 150px auto;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 196px;
+  margin: auto auto 20px auto;
+  transition: all 0.2s ease-in-out;
 }
-@media (min-width: 1000px) {
+.design-selection ul li:hover {
+  transform: scale(1.05);
+}
+.design-selection ul li a:nth-child(1) {
+  display: grid;
+  align-items: flex-end;
+}
+@media only screen and (min-width: 600px) {
+  .design-selection ul {
+    grid-template-columns: auto auto;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .design-selection ul {
+    grid-template-columns: auto;
+  }
+}
+@media only screen and (min-width: 1000px) {
   .design-selection ul {
     grid-template-columns: auto auto;
   }
@@ -62,24 +130,44 @@ ul {
 }
 .page-wrapper .intro {
   margin-top: 10vh;
+  position: relative;
+}
+@media only screen and (min-width: 1000px) {
+  .page-wrapper .intro header {
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+  .page-wrapper .intro header h1 {
+    font-size: 300%;
+    height: 0px;
+    text-align: center;
+  }
+  .page-wrapper .intro header h2 {
+    margin-top: 20px;
+  }
+  .page-wrapper .intro .summary {
+    position: relative;
+    width: 60%;
+    margin-left: 40%;
+  }
 }
 .page-wrapper .main, .page-wrapper .sidebar {
   margin-bottom: 10vh;
   padding-bottom: 20px;
 }
-@media (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   .page-wrapper {
     grid-template-columns: 60% 40%;
     grid-template-rows: auto auto;
   }
 }
-@media (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   .page-wrapper .main {
     grid-column: 1;
     grid-row: 2;
   }
 }
-@media (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   .page-wrapper .sidebar {
     grid-column: 2;
     grid-row: 1/span 2;
@@ -88,26 +176,11 @@ ul {
   }
 }
 
-@media (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   h1 {
     text-align: left;
     margin: 20px;
   }
-}
-body {
-  background-color: #444444;
-}
-
-.intro {
-  background-color: #ffffff;
-}
-
-.main {
-  background-color: #ffffff;
-}
-
-.sidebar {
-  background-color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */

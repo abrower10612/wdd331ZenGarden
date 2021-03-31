@@ -1,0 +1,21 @@
+// Declare variables ----------------------------------------------------------------------
+$black: #000000;
+$white: #ffffff;
+$red-orange: #a63700;
+$brown: #5a200a;
+$orange: #f87500;
+$light-orange: #f7a93d;
+
+// Declare mixins -------------------------------------------------------------------------
+@mixin color($color) {
+    background-color: $color;
+    opacity: 90%;
+}
+
+// Declare elements -----------------------------------------------------------------------
+body {
+    @include color($brown);
+}
+.intro, .main, .sidebar {
+    @include color($white);
+}
